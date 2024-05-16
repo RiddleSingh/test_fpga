@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="definitions.h" path="/home/centos/Desktop/KS-FPGA/baseline/codes/accel/src/definitions.h"/>
+    <originFiles name="dev_options.h" path="/home/centos/Desktop/KS-FPGA/baseline/codes/accel/src/dev_options.h"/>
+    <originFiles name="fpga_model.cpp" path="/home/centos/Desktop/KS-FPGA/baseline/codes/accel/src/fpga_model.cpp"/>
+    <originFiles name="fpga_model.h" path="/home/centos/Desktop/KS-FPGA/baseline/codes/accel/src/fpga_model.h"/>
+  </source>
+  <testbench>
+    <originFiles name="definitions.h" path="/home/centos/Desktop/KS-FPGA/baseline/codes/accel/src/definitions.h"/>
+    <originFiles name="dev_options.h" path="/home/centos/Desktop/KS-FPGA/baseline/codes/accel/src/dev_options.h"/>
+    <originFiles name="fpga_model.h" path="/home/centos/Desktop/KS-FPGA/baseline/codes/accel/src/fpga_model.h"/>
+    <originFiles name="init.cc" path="/home/centos/Desktop/KS-FPGA/baseline/codes/accel/src/init.cc"/>
+    <originFiles name="init.h" path="/home/centos/Desktop/KS-FPGA/baseline/codes/accel/src/init.h"/>
+    <originFiles name="Testbench.cpp" path="/home/centos/Desktop/KS-FPGA/baseline/codes/accel/src/Testbench.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

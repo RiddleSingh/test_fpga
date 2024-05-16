@@ -1,0 +1,61 @@
+- Characterize data independence in the loops
+- Profile within the 2 functions (SDX)
+- 
+
+Agents Endogenous Grid Method
+linear_interp2D:
+	NKGRID 100 
+
+	kmts: interpolating across both shock and capital but can be simplified
+
+	just want to invert matrix 
+
+	kprime_interp
+
+	eigenvalues of matrices maybe 20k by 20k
+
+	aggregate_NS is "drop-in" for Aggregate_ST
+	
+
+2/13:
+> Go thru dependencies and how it affects streaming
+> Loop D: what's shared between agents? If any?
+> Dynamic range of the kprime doubles?
+> 
+
+
+For later: accuracy conventions. A way to compute accuracy. Use to evaluate how much REAL precision is necessary.
+HW: fixed precision can help a lot with e.g adders versus floating point precision
+
+Evaluate convergence on fixed precision / compare to double
+
+2/20:
+> Hardware timings
+> Precision scores: what to compare? Final kcross values after ~53 iterations? Yes
+> Compare the linear interpolation on sample data to optimize resource usage (simplifications to linear interpolation?)
+> Refactoring Aggregate_ST C&D, some way to wriggle out of kcross[]? Can unroll D 10x, 20x, probably, but would like to avoid the mem access and DMA if possible
+> sds_clock
+> go over data structures
+
+
+
+> compile gsl in SDX
+ap_int<N> fixed ? ap_something else 
+
+gsl cross compile option for output format
+
+// Are they purposely not looking at the very last sim step?
+
+python3 ./common/util/compare_results.py
+
+first_iter_egm.txt Test Failed: Results mismatch
+first_iter_egm.txt Absolute maximum difference is: 4.999490e-07
+dtype: float64
+first_iter_egm.txt Mean of the difference is: 2.105511e-07
+dtype: float64
+
+updated_kcross.txt Test Passed
+updated_kcross.txt Absolute maximum difference is: 0.000015
+dtype: float64
+updated_kcross.txt Mean of the difference is: 5.096590e-09
+dtype: float64

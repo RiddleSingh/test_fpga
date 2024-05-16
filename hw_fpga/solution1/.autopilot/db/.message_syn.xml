@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;baseline/codes/accel/src/fpga_model.cpp&apos; ..." resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5324]" key="HLS 207-5324" tag="" content="unused parameter &apos;env&apos;: baseline/codes/accel/src/fpga_model.cpp:175:107" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-777]" key="HLS 200-777" tag="" content="Using interface defaults for &apos;Vitis&apos; target." resolution=""/>
+</Messages>

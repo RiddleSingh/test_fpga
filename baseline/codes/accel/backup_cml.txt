@@ -1,0 +1,34 @@
+cmake_minimum_required(VERSION 3.5.1)
+
+project(KS-accel)
+
+## Compiler and flags
+if (NOT CMAKE_BUILD_TYPE)
+	set(CMAKE_BUILD_TYPE Release)
+endif()
+message("CMake Build Type: ${CMAKE_BUILD_TYPE}")
+
+set(CMAKE_CXX_COMPILER clang++)
+set(CMAKE_CXX_FLAGS "-Wall -pedantic -Werror")
+set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g3")
+sett(CMAKE_CXX_FLAGS_RELEASE "-O3")
+
+## Static library for non-main sources which need UT
+add_library(libs STATIC src/...)
+target_include_directories(libs PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+## Main binary
+add_executable(app src/app.cc)
+target_link_libraries(app PRIVATE libs)
+
+## Unit Tests sources
+add_library(unit_tests STATIC tests/...
+)
+target_include_directories(unit_tests PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+## Unit Tests binary
+add_executable(tests_bin tests/tests.cc)
+target_link_libraries(tests_bin PRIVATE function_test libs)
+
+# Copy the test script to the compilation folderhs
+# configure_file(tests/script_test.sh script_test.sh COPYONLY)

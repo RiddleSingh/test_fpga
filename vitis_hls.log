@@ -1,0 +1,31 @@
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vitis/2020.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'centos' on host 'ip-172-31-83-81.ec2.internal' (Linux_x86_64 version 3.10.0-1160.24.1.el7.x86_64) on Thu Apr 22 14:23:46 UTC 2021
+INFO: [HLS 200-10] On os "CentOS Linux release 7.7.1908 (Core)"
+INFO: [HLS 200-10] In directory '/home/centos/Desktop/KS-FPGA'
+Sourcing Tcl script '/home/centos/Desktop/KS-FPGA/hw_fpga/solution1/csynth.tcl'
+INFO: [HLS 200-10] Opening project '/home/centos/Desktop/KS-FPGA/hw_fpga'.
+INFO: [HLS 200-10] Adding design file 'baseline/codes/accel/src/app.h' to the project
+INFO: [HLS 200-10] Adding design file 'baseline/codes/accel/src/definitions.h' to the project
+INFO: [HLS 200-10] Adding design file 'baseline/codes/accel/src/dev_options.h' to the project
+INFO: [HLS 200-10] Adding design file 'baseline/codes/accel/src/fpga_model.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'baseline/codes/accel/src/fpga_model.h' to the project
+INFO: [HLS 200-10] Adding test bench file 'baseline/codes/accel/src/Testbench.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'baseline/codes/accel/src/definitions.h' to the project
+INFO: [HLS 200-10] Adding test bench file 'baseline/codes/accel/src/dev_options.h' to the project
+INFO: [HLS 200-10] Adding test bench file 'baseline/codes/accel/src/fpga_model.h' to the project
+INFO: [HLS 200-10] Adding test bench file 'baseline/codes/accel/src/init.cc' to the project
+INFO: [HLS 200-10] Adding test bench file 'baseline/codes/accel/src/init.h' to the project
+INFO: [HLS 200-10] Opening solution '/home/centos/Desktop/KS-FPGA/hw_fpga/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_interface -default_slave_interface=s_axilite
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-10] Analyzing design file 'baseline/codes/accel/src/fpga_model.cpp' ... 
+WARNING: [HLS 207-5324] unused parameter 'env': baseline/codes/accel/src/fpga_model.cpp:175:107
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' target.

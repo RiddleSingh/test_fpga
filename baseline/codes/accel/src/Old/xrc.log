@@ -1,0 +1,9 @@
+Thu Apr 15 17:16:44 2021: Server was asked to start on port: '43971'
+Thu Apr 15 17:16:44 2021: Server is using token UUID: '57adf827-a6e4-4233-8196-d84d07373df7'
+Thu Apr 15 17:16:44 2021: Attempting to start server on port '43971'
+Thu Apr 15 17:16:44 2021: XRC main fifo: created main fifo '/tmp/xrcmain57adf827-a6e4-4233-8196-d84d07373df7', fd read = 13
+Thu Apr 15 17:16:44 2021: Running Rule Check Server
+Thu Apr 15 17:16:44 2021: Version 1.6.1
+Thu Apr 15 17:16:44 2021: Rule Check Server: Accepted socket connection from client
+Thu Apr 15 17:16:44 2021: EXCHANGE_TOKEN received, server token: 57adf827-a6e4-4233-8196-d84d07373df7, passed token: 57adf827-a6e4-4233-8196-d84d07373df7
+Thu Apr 15 17:16:44 2021: SESSION_MGR: creating session with session uuid: 'bdf0f3bd-bf38-4701-b5ea-de4e50e07f15' and name 'v++_compile_fpga'

@@ -1,0 +1,2 @@
+Directory is based upon: /Users/alessandroperi/Library/CloudStorage/Dropbox/Projects/CCE-GPU/ks/summit
+Output file (output) can be found in: /Users/alessandroperi/Library/CloudStorage/Dropbox/Projects/CCE-GPU/ks/ks-gpu.zip

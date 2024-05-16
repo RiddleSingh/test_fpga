@@ -1,0 +1,11 @@
+prefix=/home/yicheng/workspace/armlib/gsl-aarch64-linux-gnu
+exec_prefix=/home/yicheng/workspace/armlib/gsl-aarch64-linux-gnu
+libdir=/home/yicheng/workspace/armlib/gsl-aarch64-linux-gnu/lib
+includedir=/home/yicheng/workspace/armlib/gsl-aarch64-linux-gnu/include
+GSL_CBLAS_LIB=-lgslcblas
+
+Name: GSL
+Description: GNU Scientific Library
+Version: 2.6
+Libs: -L/home/yicheng/workspace/armlib/gsl-aarch64-linux-gnu/lib -lgsl ${GSL_CBLAS_LIB} -lm -lm 
+Cflags: -I/home/yicheng/workspace/armlib/gsl-aarch64-linux-gnu/include

@@ -1,0 +1,425 @@
+
+> source('checks.r')
+
+> l <- list()
+
+> l$orig_mat <- check_all('orig', 'matlab')
+[1] "*** kprime *** -----------"
+List of 15
+ $ d            : num [1:1600] 0 0 0 0 0 0 0 0 0 0 ...
+ $ d2           : num [1:1600] 0 0 0 0 0 0 0 0 0 0 ...
+ $ reldiff      : num [1:1600] 0 0 0 0 0 0 0 0 0 0 ...
+ $ absdiff      : num [1:1600] 0 0 0 0 0 0 0 0 0 0 ...
+ $ mse          : num 0.0286
+ $ mase         : num 0.00425
+ $ rmse         : num 0.169
+ $ max_abs_delta: num 0.664
+ $ mape         : num NaN
+ $ smape        : num NaN
+ $ mean_reldiff : num 0.00286
+ $ max_pos_delta: num 0.623
+ $ min_pos_delta: num -0.664
+ $ mae          : num 0.0821
+ $ sd_abs_delta : num 0.148
+[1] "*** kcross *** -----------"
+List of 15
+ $ d            : num [1:10000] 24.8 28.1 25.9 37 66 ...
+ $ d2           : num [1:10000] 15.4 18.5 13.6 15.1 16.9 ...
+ $ reldiff      : num [1:10000] 0.38 0.343 0.475 0.591 0.743 ...
+ $ absdiff      : num [1:10000] 9.43 9.63 12.3 21.86 49.05 ...
+ $ mse          : num 11594
+ $ mase         : num 1.19
+ $ rmse         : num 108
+ $ max_abs_delta: num 619
+ $ mape         : num 0.537
+ $ smape        : num 0.634
+ $ mean_reldiff : num 0.457
+ $ max_pos_delta: num 144
+ $ min_pos_delta: num -619
+ $ mae          : num 36.7
+ $ sd_abs_delta : num 101
+[1] "*** coeffs *** -----------"
+List of 15
+ $ d            : num [1:4] 0.127 0.965 0.139 0.963
+ $ d2           : num [1:4] 0.146 0.96 0.155 0.959
+ $ reldiff      : num [1:4] 0.12993 0.00499 0.10446 0.0043
+ $ absdiff      : num [1:4] 0.01896 0.00482 0.01623 0.00414
+ $ mse          : num 0.000166
+ $ mase         : num 0.0133
+ $ rmse         : num 0.0129
+ $ max_abs_delta: num 0.019
+ $ mape         : num 0.0688
+ $ smape        : num 0.0646
+ $ mean_reldiff : num 0.0609
+ $ max_pos_delta: num 0.00482
+ $ min_pos_delta: num -0.019
+ $ mae          : num 0.011
+ $ sd_abs_delta : num 0.00766
+[1] "*** R^2 *** -----------"
+List of 15
+ $ d            : num [1:2] 1 1
+ $ d2           : num [1:2] 1 1
+ $ reldiff      : num [1:2] 0.00001788 0.00000614
+ $ absdiff      : num [1:2] 0.00001788 0.00000614
+ $ mse          : num 1.79e-10
+ $ mase         : num 0.348
+ $ rmse         : num 0.0000134
+ $ max_abs_delta: num 0.0000179
+ $ mape         : num 0.000012
+ $ smape        : num 0.000012
+ $ mean_reldiff : num 0.000012
+ $ max_pos_delta: num 0.0000179
+ $ min_pos_delta: num 0.00000614
+ $ mae          : num 0.000012
+ $ sd_abs_delta : num 0.0000083
+
+> l$orig_mat_egm <- check_all('orig', 'm_egm_spline')
+[1] "*** kprime *** -----------"
+List of 15
+ $ d            : num [1:1600] 0 0 0 0 0 0 0 0 0 0 ...
+ $ d2           : num [1:1600] 0 0 0 0 0 0 0 0 0 0 ...
+ $ reldiff      : num [1:1600] 0 0 0 0 0 0 0 0 0 0 ...
+ $ absdiff      : num [1:1600] 0 0 0 0 0 0 0 0 0 0 ...
+ $ mse          : num 0.0000372
+ $ mase         : num 0.000226
+ $ rmse         : num 0.0061
+ $ max_abs_delta: num 0.0174
+ $ mape         : num NaN
+ $ smape        : num NaN
+ $ mean_reldiff : num 0.00034
+ $ max_pos_delta: num 0.0174
+ $ min_pos_delta: num -0.00963
+ $ mae          : num 0.00437
+ $ sd_abs_delta : num 0.00426
+[1] "*** kcross *** -----------"
+List of 15
+ $ d            : num [1:10000] 24.8 28.1 25.9 37 66 ...
+ $ d2           : num [1:10000] 24.1 26.9 24.3 35.7 52.7 ...
+ $ reldiff      : num [1:10000] 0.028 0.0438 0.0617 0.0354 0.2014 ...
+ $ absdiff      : num [1:10000] 0.694 1.23 1.598 1.309 13.291 ...
+ $ mse          : num 167
+ $ mase         : num 0.146
+ $ rmse         : num 12.9
+ $ max_abs_delta: num 179
+ $ mape         : num 0.0668
+ $ smape        : num 0.0682
+ $ mean_reldiff : num 0.0642
+ $ max_pos_delta: num 15.3
+ $ min_pos_delta: num -179
+ $ mae          : num 4.49
+ $ sd_abs_delta : num 12.1
+[1] "*** coeffs *** -----------"
+List of 15
+ $ d            : num [1:4] 0.127 0.965 0.139 0.963
+ $ d2           : num [1:4] 0.126 0.965 0.14 0.963
+ $ reldiff      : num [1:4] 0.01078 0.000407 0.003835 0.000133
+ $ absdiff      : num [1:4] 0.001369 0.000392 0.000536 0.000128
+ $ mse          : num 0.000000583
+ $ mase         : num 0.000731
+ $ rmse         : num 0.000763
+ $ max_abs_delta: num 0.00137
+ $ mape         : num 0.00379
+ $ smape        : num 0.00381
+ $ mean_reldiff : num 0.00379
+ $ max_pos_delta: num 0.00137
+ $ min_pos_delta: num -0.000536
+ $ mae          : num 0.000606
+ $ sd_abs_delta : num 0.000536
+[1] "*** R^2 *** -----------"
+List of 15
+ $ d            : num [1:2] 1 1
+ $ d2           : num [1:2] 1 1
+ $ reldiff      : num [1:2] 0.000001479 0.000000818
+ $ absdiff      : num [1:2] 0.000001479 0.000000818
+ $ mse          : num 1.43e-12
+ $ mase         : num 0.0333
+ $ rmse         : num 0.00000119
+ $ max_abs_delta: num 0.00000148
+ $ mape         : num 0.00000115
+ $ smape        : num 0.00000115
+ $ mean_reldiff : num 0.00000115
+ $ max_pos_delta: num -0.000000818
+ $ min_pos_delta: num -0.00000148
+ $ mae          : num 0.00000115
+ $ sd_abs_delta : num 0.000000467
+
+> l$orig_mat_agg <- check_all('orig', 'm_agg_spline')
+[1] "*** kprime *** -----------"
+List of 15
+ $ d            : num [1:1600] 0 0 0 0 0 0 0 0 0 0 ...
+ $ d2           : num [1:1600] 0 0 0 0 0 0 0 0 0 0 ...
+ $ reldiff      : num [1:1600] 0 0 0 0 0 0 0 0 0 0 ...
+ $ absdiff      : num [1:1600] 0 0 0 0 0 0 0 0 0 0 ...
+ $ mse          : num 0.0303
+ $ mase         : num 0.00424
+ $ rmse         : num 0.174
+ $ max_abs_delta: num 0.677
+ $ mape         : num NaN
+ $ smape        : num NaN
+ $ mean_reldiff : num 0.00197
+ $ max_pos_delta: num 0.677
+ $ min_pos_delta: num -0.669
+ $ mae          : num 0.082
+ $ sd_abs_delta : num 0.154
+[1] "*** kcross *** -----------"
+List of 15
+ $ d            : num [1:10000] 24.8 28.1 25.9 37 66 ...
+ $ d2           : num [1:10000] 16.2 19.2 14.5 17.2 18.9 ...
+ $ reldiff      : num [1:10000] 0.348 0.317 0.439 0.534 0.714 ...
+ $ absdiff      : num [1:10000] 8.64 8.91 11.36 19.72 47.08 ...
+ $ mse          : num 10988
+ $ mase         : num 1.14
+ $ rmse         : num 105
+ $ max_abs_delta: num 611
+ $ mape         : num 0.505
+ $ smape        : num 0.589
+ $ mean_reldiff : num 0.43
+ $ max_pos_delta: num 141
+ $ min_pos_delta: num -611
+ $ mae          : num 35.1
+ $ sd_abs_delta : num 98.8
+[1] "*** coeffs *** -----------"
+List of 15
+ $ d            : num [1:4] 0.127 0.965 0.139 0.963
+ $ d2           : num [1:4] 0.141 0.961 0.15 0.96
+ $ reldiff      : num [1:4] 0.09987 0.00369 0.06975 0.00272
+ $ absdiff      : num [1:4] 0.01409 0.00356 0.01043 0.00262
+ $ mse          : num 0.0000817
+ $ mase         : num 0.00926
+ $ rmse         : num 0.00904
+ $ max_abs_delta: num 0.0141
+ $ mape         : num 0.0481
+ $ smape        : num 0.046
+ $ mean_reldiff : num 0.044
+ $ max_pos_delta: num 0.00356
+ $ min_pos_delta: num -0.0141
+ $ mae          : num 0.00768
+ $ sd_abs_delta : num 0.00551
+[1] "*** R^2 *** -----------"
+List of 15
+ $ d            : num [1:2] 1 1
+ $ d2           : num [1:2] 1 1
+ $ reldiff      : num [1:2] 0.00001443 0.00000525
+ $ absdiff      : num [1:2] 0.00001443 0.00000525
+ $ mse          : num 1.18e-10
+ $ mase         : num 0.285
+ $ rmse         : num 0.0000109
+ $ max_abs_delta: num 0.0000144
+ $ mape         : num 0.00000984
+ $ smape        : num 0.00000984
+ $ mean_reldiff : num 0.00000984
+ $ max_pos_delta: num 0.0000144
+ $ min_pos_delta: num 0.00000525
+ $ mae          : num 0.00000984
+ $ sd_abs_delta : num 0.00000649
+
+> l$orig_c <- check_all('orig', 'c')
+[1] "*** kprime *** -----------"
+List of 15
+ $ d            : num [1:1600] 0 0 0 0 0 0 0 0 0 0 ...
+ $ d2           : num [1:1600] 0 0 0 0 0 0 0 0 0 0 ...
+ $ reldiff      : num [1:1600] 0 0 0 0 0 0 0 0 0 0 ...
+ $ absdiff      : num [1:1600] 0 0 0 0 0 0 0 0 0 0 ...
+ $ mse          : num 0.0286
+ $ mase         : num 0.00425
+ $ rmse         : num 0.169
+ $ max_abs_delta: num 0.664
+ $ mape         : num NaN
+ $ smape        : num NaN
+ $ mean_reldiff : num 0.00286
+ $ max_pos_delta: num 0.623
+ $ min_pos_delta: num -0.664
+ $ mae          : num 0.0821
+ $ sd_abs_delta : num 0.148
+[1] "*** kcross *** -----------"
+List of 15
+ $ d            : num [1:10000] 24.8 28.1 25.9 37 66 ...
+ $ d2           : num [1:10000] 15.4 18.5 13.6 15.1 16.9 ...
+ $ reldiff      : num [1:10000] 0.38 0.343 0.475 0.591 0.743 ...
+ $ absdiff      : num [1:10000] 9.43 9.63 12.3 21.86 49.05 ...
+ $ mse          : num 11594
+ $ mase         : num 1.19
+ $ rmse         : num 108
+ $ max_abs_delta: num 619
+ $ mape         : num 0.537
+ $ smape        : num 0.634
+ $ mean_reldiff : num 0.457
+ $ max_pos_delta: num 144
+ $ min_pos_delta: num -619
+ $ mae          : num 36.7
+ $ sd_abs_delta : num 101
+[1] "*** coeffs *** -----------"
+List of 15
+ $ d            : num [1:4] 0.127 0.965 0.139 0.963
+ $ d2           : num [1:4] 0.146 0.96 0.155 0.959
+ $ reldiff      : num [1:4] 0.12993 0.00499 0.10446 0.0043
+ $ absdiff      : num [1:4] 0.01896 0.00482 0.01623 0.00414
+ $ mse          : num 0.000166
+ $ mase         : num 0.0133
+ $ rmse         : num 0.0129
+ $ max_abs_delta: num 0.019
+ $ mape         : num 0.0688
+ $ smape        : num 0.0646
+ $ mean_reldiff : num 0.0609
+ $ max_pos_delta: num 0.00482
+ $ min_pos_delta: num -0.019
+ $ mae          : num 0.011
+ $ sd_abs_delta : num 0.00766
+[1] "*** R^2 *** -----------"
+List of 15
+ $ d            : num [1:2] 1 1
+ $ d2           : num [1:2] 1 1
+ $ reldiff      : num [1:2] 0.00001788 0.00000614
+ $ absdiff      : num [1:2] 0.00001788 0.00000614
+ $ mse          : num 1.79e-10
+ $ mase         : num 0.348
+ $ rmse         : num 0.0000134
+ $ max_abs_delta: num 0.0000179
+ $ mape         : num 0.000012
+ $ smape        : num 0.000012
+ $ mean_reldiff : num 0.000012
+ $ max_pos_delta: num 0.0000179
+ $ min_pos_delta: num 0.00000614
+ $ mae          : num 0.000012
+ $ sd_abs_delta : num 0.0000083
+
+> l$c_mat <- check_all('c', 'matlab')
+[1] "*** kprime *** -----------"
+List of 15
+ $ d            : num [1:1600] 0 0 0 0 0 0 0 0 0 0 ...
+ $ d2           : num [1:1600] 0 0 0 0 0 0 0 0 0 0 ...
+ $ reldiff      : num [1:1600] 0 0 0 0 0 0 0 0 0 0 ...
+ $ absdiff      : num [1:1600] 0 0 0 0 0 0 0 0 0 0 ...
+ $ mse          : num 7.33e-15
+ $ mase         : num 0.00000000311
+ $ rmse         : num 0.0000000856
+ $ max_abs_delta: num 0.000000207
+ $ mape         : num NaN
+ $ smape        : num NaN
+ $ mean_reldiff : num 0.00000000522
+ $ max_pos_delta: num 0.000000207
+ $ min_pos_delta: num -0.000000196
+ $ mae          : num 0.00000006
+ $ sd_abs_delta : num 0.000000061
+[1] "*** kcross *** -----------"
+List of 15
+ $ d            : num [1:10000] 15.4 18.5 13.6 15.1 16.9 ...
+ $ d2           : num [1:10000] 15.4 18.5 13.6 15.1 16.9 ...
+ $ reldiff      : num [1:10000] 0.00000428 0.00000335 0.00000576 0.00001118 0.00000919 ...
+ $ absdiff      : num [1:10000] 0.0000657 0.0000619 0.0000783 0.0001689 0.0001557 ...
+ $ mse          : num 0.000000159
+ $ mase         : num 0.00000267
+ $ rmse         : num 0.000399
+ $ max_abs_delta: num 0.00272
+ $ mape         : num 0.00000456
+ $ smape        : num 0.00000456
+ $ mean_reldiff : num 0.00000456
+ $ max_pos_delta: num 0.00272
+ $ min_pos_delta: num -0.000324
+ $ mae          : num 0.000143
+ $ sd_abs_delta : num 0.000372
+[1] "*** coeffs *** -----------"
+List of 15
+ $ d            : num [1:4] 0.146 0.96 0.155 0.959
+ $ d2           : num [1:4] 0.146 0.96 0.155 0.959
+ $ reldiff      : num [1:4] 0.00000002576 0.00000000157 0.00000003074 0.00000000105
+ $ absdiff      : num [1:4] 0.00000000376 0.0000000015 0.00000000478 0.000000001
+ $ mse          : num 1.01e-17
+ $ mase         : num 0.00000000342
+ $ rmse         : num 0.00000000317
+ $ max_abs_delta: num 0.00000000478
+ $ mape         : num 0.0000000148
+ $ smape        : num 0.0000000148
+ $ mean_reldiff : num 0.0000000148
+ $ max_pos_delta: num 0.00000000478
+ $ min_pos_delta: num -0.00000000376
+ $ mae          : num 0.00000000276
+ $ sd_abs_delta : num 0.0000000018
+[1] "*** R^2 *** -----------"
+List of 15
+ $ d            : num [1:2] 1 1
+ $ d2           : num [1:2] 1 1
+ $ reldiff      : num [1:2] 3.14e-11 7.61e-11
+ $ absdiff      : num [1:2] 3.14e-11 7.61e-11
+ $ mse          : num 3.39e-21
+ $ mase         : num 0.00000116
+ $ rmse         : num 5.82e-11
+ $ max_abs_delta: num 7.61e-11
+ $ mape         : num 5.38e-11
+ $ smape        : num 5.38e-11
+ $ mean_reldiff : num 5.38e-11
+ $ max_pos_delta: num -3.14e-11
+ $ min_pos_delta: num -7.61e-11
+ $ mae          : num 5.38e-11
+ $ sd_abs_delta : num 3.16e-11
+
+> l$c_cfloat <- check_all('c', 'cfloat')
+[1] "*** kprime *** -----------"
+List of 15
+ $ d            : num [1:1600] 0 0 0 0 0 0 0 0 0 0 ...
+ $ d2           : num [1:1600] 0 0 0 0 0 0 0 0 0 0 ...
+ $ reldiff      : num [1:1600] 0 0 0 0 0 0 0 0 0 0 ...
+ $ absdiff      : num [1:1600] 0 0 0 0 0 0 0 0 0 0 ...
+ $ mse          : num 0.000283
+ $ mase         : num 0.000544
+ $ rmse         : num 0.0168
+ $ max_abs_delta: num 0.0397
+ $ mape         : num NaN
+ $ smape        : num NaN
+ $ mean_reldiff : num 0.00042
+ $ max_pos_delta: num 0.0243
+ $ min_pos_delta: num -0.0397
+ $ mae          : num 0.0105
+ $ sd_abs_delta : num 0.0131
+[1] "*** kcross *** -----------"
+List of 15
+ $ d            : num [1:10000] 15.4 18.5 13.6 15.1 16.9 ...
+ $ d2           : num [1:10000] 15.9 19 14.3 17.1 18.7 ...
+ $ reldiff      : num [1:10000] 0.0347 0.0266 0.0484 0.1167 0.0939 ...
+ $ absdiff      : num [1:10000] 0.553 0.504 0.692 1.995 1.755 ...
+ $ mse          : num 570
+ $ mase         : num 0.0579
+ $ rmse         : num 23.9
+ $ max_abs_delta: num 682
+ $ mape         : num 0.0922
+ $ smape        : num 0.0476
+ $ mean_reldiff : num 0.044
+ $ max_pos_delta: num 665
+ $ min_pos_delta: num -682
+ $ mae          : num 3.11
+ $ sd_abs_delta : num 23.7
+[1] "*** coeffs *** -----------"
+List of 15
+ $ d            : num [1:4] 0.146 0.96 0.155 0.959
+ $ d2           : num [1:4] 0.144 0.96 0.155 0.959
+ $ reldiff      : num [1:4] 0.013921 0.000578 0.004256 0.000199
+ $ absdiff      : num [1:4] 0.002032 0.000555 0.000661 0.000191
+ $ mse          : num 0.00000123
+ $ mase         : num 0.00107
+ $ rmse         : num 0.00111
+ $ max_abs_delta: num 0.00203
+ $ mape         : num 0.00474
+ $ smape        : num 0.00477
+ $ mean_reldiff : num 0.00474
+ $ max_pos_delta: num 0.00203
+ $ min_pos_delta: num -0.000555
+ $ mae          : num 0.00086
+ $ sd_abs_delta : num 0.000807
+[1] "*** R^2 *** -----------"
+List of 15
+ $ d            : num [1:2] 1 1
+ $ d2           : num [1:2] 1 1
+ $ reldiff      : num [1:2] 0.000000662 0.000000322
+ $ absdiff      : num [1:2] 0.000000662 0.000000322
+ $ mse          : num 2.71e-13
+ $ mase         : num 0.0106
+ $ rmse         : num 0.000000521
+ $ max_abs_delta: num 0.000000662
+ $ mape         : num 0.000000492
+ $ smape        : num 0.000000492
+ $ mean_reldiff : num 0.000000492
+ $ max_pos_delta: num -0.000000322
+ $ min_pos_delta: num -0.000000662
+ $ mae          : num 0.000000492
+ $ sd_abs_delta : num 0.000000241
+

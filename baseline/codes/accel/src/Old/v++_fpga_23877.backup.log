@@ -1,0 +1,8 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /home/centos/Desktop/KS-FPGA/baseline/codes/accel/src/_x/reports/fpga
+	Log files: /home/centos/Desktop/KS-FPGA/baseline/codes/accel/src/_x/logs/fpga
+ERROR: [v++ 60-1620] File does not exist: design.cfg
+ERROR: [v++ 60-592] Failed to finish compilation
+WARNING: [v++ 60-1140] Rule service exception in stopRuleCheckSession. Design Guidance report may not be produced. Exception: write: Bad file descriptor
+INFO: [v++ 60-1662] Stopping dispatch session having empty uuid.
+INFO: [v++ 60-1653] Closing dispatch client.
